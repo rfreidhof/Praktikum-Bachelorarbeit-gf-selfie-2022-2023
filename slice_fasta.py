@@ -1,7 +1,7 @@
 import sys
 from argparse import ArgumentParser
 
-#I was too lazy to implement checks whether a file is actually in the fasta format.
+#This program does not check whether a file is actually in the fasta format.
 
 zerteiler = ArgumentParser()
 

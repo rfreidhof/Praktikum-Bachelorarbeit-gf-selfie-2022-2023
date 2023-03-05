@@ -1,7 +1,7 @@
 import sys
 from argparse import ArgumentParser
 
-#This programm is specifically for featureCounts output files as of 20.9.2022 
+#This programm is specifically for featureCounts output files as of 20.09.2022 
 
 zerteiler = ArgumentParser()
 

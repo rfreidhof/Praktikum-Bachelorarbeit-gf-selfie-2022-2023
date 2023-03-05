@@ -22,7 +22,7 @@ for line in gff_file:
         stop=int(components[4])
         name=components[8]
 
-        if chromosome == 'Lp_chr6_0' and designation == 'gene' and start > 242000000 and stop <255000000:
+        if chromosome == 'Lp_chr6_0' and designation == 'gene' and start > 242000000 and stop <255000000: #Hardcoded for my purposes
             name=name.split(";")[0]
             name=name.split("=")[1]
             names.append(name)

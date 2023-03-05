@@ -69,13 +69,12 @@ hundred_position = int(hundred_components[3])
 fifty = False
 hundred = False
 
-#def fifty_iteration(): Put the repetitive code into a function.
+#def fifty_iteration(): Put the repetitive code into a function if you want the code to look cleaner.
 
 
 
 
 for gene in genes:
-    #print(fifty_gene + " " + hundred_gene + " " + gene)
     if fifty_gene == gene:
         if hundred_gene == gene:
             fifty = True
@@ -87,7 +86,7 @@ for gene in genes:
                     
                     fifty_line = fifty_file.readline()
                     if len(fifty_line) == 0:
-                        fifty_gene = "-1" #This should do it?
+                        fifty_gene = "-1" 
                     else:
                         fifty_components = fifty_line.split("\t")
                         fifty_gene = fifty_components[1]
@@ -104,7 +103,7 @@ for gene in genes:
                     out1_file.write(chromosome+"\t"+gene+"\t"+str(fifty_position)+"\t50\n")
                     fifty_line = fifty_file.readline()
                     if len(fifty_line) == 0:
-                        fifty_gene = "-1" #This should do it?
+                        fifty_gene = "-1" 
                     else:
                         fifty_components = fifty_line.split("\t")
                         fifty_gene = fifty_components[1]
@@ -124,7 +123,7 @@ for gene in genes:
             out1_file.write(chromosome+"\t"+gene+"\t"+str(fifty_position)+"\t50\n")
             fifty_line = fifty_file.readline()
             if len(fifty_line) == 0:
-                    fifty_gene = "-1" #This should do it?
+                    fifty_gene = "-1" 
             else:
                 fifty_components = fifty_line.split("\t")
                 fifty_gene = fifty_components[1]
@@ -133,7 +132,7 @@ for gene in genes:
                 out1_file.write(chromosome+"\t"+gene+"\t"+str(fifty_position)+"\t50\n")
                 fifty_line = fifty_file.readline()
                 if len(fifty_line) == 0:
-                    fifty_gene = "-1" #This should do it?
+                    fifty_gene = "-1" 
                 else:
                     fifty_components = fifty_line.split("\t")
                     fifty_gene = fifty_components[1]

@@ -1,6 +1,8 @@
 import sys
 from argparse import ArgumentParser
 
+#This script was designed to show a flaw in a vcf file. It is not used in the final version of my bachelor of 2023.
+
 zerteiler = ArgumentParser()
 
 zerteiler.add_argument("--vcf", dest="vcf", required=True, help="vcf file. This needs to be sorted for the program to provide correct output. if it isn\'t then a quicksort like algorithm would be more efficient for determining variants\' positions.")
@@ -44,15 +46,13 @@ out_file.write("Chromosome\tGene\tGene Position\tPosition\tReference\tAlternativ
 
 
 def func(genes):
-    last_position = -1
     vcf_file.readline() #skip headers
     for line in vcf_file:
         components=line.split("\t")
         chromosome = components[0]
         position = int(components[1])
         if chromosome == 'Lp_chr6_0' and position > 242000000 and position < 255000000: #The vcf and gff are sorted, thus you can do all of this in one pass.
-            if position > genes[0][1]: #If the variation might be in the gene | Also removes duplicates, if something went wrong in the vcf.
-                last_position = position
+            if position > genes[0][1]: #If the variation might be in the gene
                 while True:
                     if position < genes[0][2]: #If the variation is in the gene
                         reference_sequence = components[3]

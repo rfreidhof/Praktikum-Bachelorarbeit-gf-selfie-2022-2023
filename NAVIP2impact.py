@@ -1,7 +1,7 @@
 import sys
 from argparse import ArgumentParser
 
-#This program is designed to work with files created by SNPEff as of 27.9.2022.
+#This program is designed to work with files created by NAVIP. I discontinued working on this script, it is not relevant to my bachelor in 2023.
 
 zerteiler = ArgumentParser()
 

@@ -1,6 +1,8 @@
 import sys
 from argparse import ArgumentParser
 
+#This is purely a helper script to decrease the computation time of future scripts.
+
 zerteiler = ArgumentParser()
 
 zerteiler.add_argument("--vcf", dest="vcf", required=True, help="vcf file. This needs to be sorted for the program to provide correct output. if it isn\'t then a quicksort like algorithm would be more efficient for determining variants\' positions.")
